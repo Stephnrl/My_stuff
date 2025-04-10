@@ -31,11 +31,11 @@ jobs:
         check-latest: true
 
     - name: Get dependencies
-      working-directory: ./Go/password_mgr
+      working-directory: ./Go
       run: go mod download
 
     - name: Build
-      working-directory: ./Go/password_mgr
+      working-directory: ./Go
       run: go build -v -o ../../${{ matrix.output_name }}
 
     - name: Upload artifact
